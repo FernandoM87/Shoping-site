@@ -1,6 +1,6 @@
 let shoppingCart = document.getElementById("shopping-cart")
 
-let basket = JSON.parse(localStorage.getItem("data")) || []
+let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 
 // Produktdatat finns i variabeln shopData (se data.js)
@@ -31,6 +31,8 @@ const generateCartItems = () => {
     //     <h3> {--total * price--}</h3>
     // </div>
     // </div>
+
+    console.log("is running");
  
 }
 
