@@ -31,8 +31,6 @@ const generateCartItems = () => {
     //     <h3> {--total * price--}</h3>
     // </div>
     // </div>
-
-    console.log("is running");
  
 }
 

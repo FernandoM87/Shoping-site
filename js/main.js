@@ -21,7 +21,7 @@ const generateShop = () => {
                  <h2>${price}</h2>
                  <div class="buttons">
                      <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-                     <div id=${id} class="quantity">???</div>
+                     <div id=${id} class="quantity"></div>
                      <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
                  </div>
                  </div>
@@ -67,6 +67,12 @@ const decrement = (id) => {
 
 const update = (id) => {
     let search = basket.find ((x) => x.id === id)
-    console.log(search.item);
+    /* console.log(search.item); */
     document.getElementById(id).innerHTML = search.item;
+    cartUpdating();
+}
+
+const cartUpdating = () => {
+    let IconCart = document.getElementById("cartAmount");
+    IconCart.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
 }
